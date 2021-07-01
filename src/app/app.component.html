@@ -20,3 +20,24 @@
         <a href="https://jasonwatmore.com" target="_top">JasonWatmore.com</a>
     </p>
 </div>
+
+<!--<agm-map [latitude]="latitude" [longitude]="longitude" style="height: 400px" (mapClick)="onChooseLocation($event)"></agm-map>-->
+<google-map
+  height="500px"
+  width="100%"
+  [options]="mapOptions"
+
+  (mapClick)="addMarker($event)"
+>
+  <map-marker *ngFor="let markerPosition of markerPositions"
+              [position]="markerPosition"
+              [options]="markerOptions" ></map-marker>
+<!--  <map-marker-->
+<!--    *ngFor="let marker of markers"-->
+<!--    [position]="marker.position"-->
+<!--    [label]="marker.label"-->
+<!--    [title]="marker.title"-->
+<!--    [options]="marker.options"-->
+<!--  >-->
+<!--  </map-marker>-->
+</google-map>

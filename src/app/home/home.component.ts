@@ -2,6 +2,7 @@
 import { first } from 'rxjs/operators';
 
 import { AccountService } from '@app/_services';
+// import {MapService} from '@app/_services/map.service';
 
 @Component({ templateUrl: 'home.component.html' })
 export class HomeComponent {
